@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Finances</title>
+</head>
+<body>
+    <header>
+        <div id="title_space">
+            <h1>Calculate Finances</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li onclick="incomePage()">Income</li>
+                <li onclick="expensesPage()">Known Expenses</li>
+                <li onclick="budgetPage()">Final Budget</li>
+                <li onclick="howItWorksPage()">How it works</li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="Income_Page">
+        <h1>Income</h1>
+        <label for="Hourly">Hourly:</label>
+        <input type="number" min="0" value="0" id="Hourly">
+        <br/>
+        <label for="Salary">Salary:</label>
+        <input type="number" min="0" value="0" id="Salary">
+        <br/>
+        <label for="hours">Hours within one pay period: </label>
+        <input type="number" min="0" value="0" id="Hours">
+        <button onclick="submit_income_variables()">Submit</button>
+    </main>
+
+    <main id="Expenses_Page">
+        <h1>Known Expenses</h1>
+        <h2>Examples</h2>
+        <ul>
+            <li>Food</li>
+            <li>Rent</li>
+            <li>Utilities</li>
+            <li>Streaming Services</li>
+            <li>All other subscriptions</li>
+        </ul>
+        <label for="expense1">Expense 1: </label>
+        <input type="number" min="0" value="0" id="expense1">
+        <br/>
+        <label for="expense2">Expense 2: </label>
+        <input type="number" min="0" value="0" id="expense2">
+        <br/>
+        <label for="expense3">Expense 3: </label>
+        <input type="number" min="0" value="0" id="expense3">
+        <br/>
+        <label for="expense4">Expense 4: </label>
+        <input type="number" min="0" value="0" id="expense4">
+        <br/>
+        <label for="expense5">Expense 5: </label>
+        <input type="number" min="0" value="0" id="expense5">
+        <br/>
+        <label for="expense6">Expense 6: </label>
+        <input type="number" min="0" value="0" id="expense6">
+        <br/>
+        <label for="expense7">Expense 7: </label>
+        <input type="number" min="0" value="0" id="expense7">
+        <br/>
+        <label for="expense8">Expense 8: </label>
+        <input type="number" min="0" value="0" id="expense8">
+        <br/>
+        <label for="expense9">Expense 9: </label>
+        <input type="number" min="0" value="0" id="expense9">
+        <br/>
+        <label for="expense10">Expense 10: </label>
+        <input type="number" min="0" value="0" id="expense10">
+        <br/>
+        <button onclick="submitExpensesVariables()">Submit</button>
+    </main>
+
+    <main id="Budget_Page">
+        <h1>Budget</h1>
+        <p id="Total_Income_Space"></p>
+        <p id="Total_Expenses_Space"></p>
+        <p id="Leftover_Money_Space"></p>
+        <label for="savings_percentage">Savings Percentage: </label>
+        <input type="number" min="0" max="100" value="0" step="5" id="savings_percentage">
+        <br/>
+        <button onclick="submitSavingsPercentage()">Submit</button>
+        <p id="Savings_Space"></p>
+        <p id="Leftover_After_savings_Space"></p>
+    </main>
+    
+    <main id="How_It_Works_Page">
+        <h1>How it Works</h1>
+        <p>First, all incomes are added together. If there is a salary income, then it is divided by 26 (pay periods within one year) before adding it to the initial income.</p>
+        <p>Then, the new hourly income is multiplied by the number of hours worked in a pay period.</p>
+        <p>Then, all expenses are added together. A farily simple, yet tedious process.</p>
+        <p>Leftover money is calculated by subtracting the total of the expenses from the total income.</p>
+        <p>Then, leftover money is multipled by the savings percentage (5% = 0.05, 25% = 0.25, etc.).</p>
+        <p>Then, all of the values are printed out for you on the final budget screen.</p>
+        <h1>Do it yourself!</h1>
+        <p>This program is designed to help you start budgeting, it is not the end all be all. To get a good look at your finances, some good things to factor in are state taxes, federal taxes, insurance deductions, etcetera. You should be able to find taxing information from any search engine. </p>
+        <p>Happy financing!</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
