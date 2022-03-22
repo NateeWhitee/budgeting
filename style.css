@@ -49,7 +49,7 @@ header #menu ul li:hover {
 
 main {
     position: absolute;
-    top: 25%;
+    top: 150px;
     line-height: 1.5;
     width: 60%;
     margin: 10px 20%;
@@ -126,6 +126,7 @@ main button:hover {
         width: 100%;
         margin: 10px 0px;
         border-radius: 0px;
+        top: 225px;
     }
 
     main button:hover {
