@@ -63,7 +63,7 @@ function submit_income_variables() {
 
     // turn salary income into an hourly income
     if (salary_income != 0) {
-        hourly_income += salary_income / 26;
+        hourly_income += (salary_income / 26) / hours;
     }
     total_income = hours * hourly_income;
     updateBudget();
@@ -170,3 +170,5 @@ function updateBudget() {
     leftover_after_savings = leftover_money - savings;
     leftover_after_savings_space.innerHTML = `Leftovers after savings: ${leftover_after_savings}`
 }
+
+updateBudget();
